@@ -1,0 +1,32 @@
+Brief is your AI-powered meeting companion that helps you prepare before and debrief after every meeting. Powered entirely by Apple Intelligence, all processing happens on your device -- your meeting data never leaves your iPhone or iPad.
+
+BEFORE THE MEETING
+Paste your meeting agenda or context, and Brief instantly generates:
+- Key talking points to raise
+- Smart questions to ask
+- Potential objections to anticipate
+- Suggested meeting structure
+- Time allocation recommendations
+
+AFTER THE MEETING
+Paste your raw notes, and Brief extracts:
+- Key decisions made
+- Action items with owners and deadlines
+- Open questions that need follow-up
+- A ready-to-send follow-up email
+
+FOUR SPECIALIZED TEMPLATES
+- Meeting Prep: Full preparation materials for any meeting
+- Meeting Debrief: Structured output from meeting notes
+- 1:1 Prep: Thoughtful conversation starters and topics
+- Presentation Prep: Key messages, slide structure, and opening hooks
+
+COMPLETE PRIVACY
+Brief uses Apple Intelligence for all AI processing. Your meeting data, notes, and generated content are processed entirely on-device and stored only in your local app data. Nothing is ever sent to external servers.
+
+EXPORT & SHARE
+- Copy follow-up emails directly to your clipboard
+- Export meeting briefs as professional PDFs
+- Share results with your team
+
+Requires an Apple Intelligence-capable device (iPhone 16 or later, iPad with M-series chip) running iOS 26 or later.

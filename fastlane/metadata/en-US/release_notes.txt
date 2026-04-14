@@ -1,0 +1,7 @@
+Initial release of Brief: Meeting AI.
+
+- AI-powered meeting preparation with talking points, questions, and structure
+- Meeting debrief with decisions, action items, and follow-up email generation
+- 1:1 and presentation prep templates
+- PDF export and sharing
+- Complete on-device processing with Apple Intelligence

@@ -1,0 +1,73 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build and upload to App Store Connect"
+  lane :release do
+    api_key = app_store_connect_api_key(
+      key_id: "5H383G83CF",
+      issuer_id: "d561a068-9c42-4a88-92df-b61c9cc541a7",
+      key_filepath: File.expand_path("~/private_keys/api_key.p8"),
+      in_house: false
+    )
+
+    build_app(
+      project: "Brief.xcodeproj",
+      scheme: "Brief",
+      destination: "generic/platform=iOS",
+      export_method: "app-store",
+      clean: true,
+      output_directory: "./build",
+      output_name: "Brief.ipa"
+    )
+
+    upload_to_app_store(
+      api_key: api_key,
+      skip_metadata: true,
+      skip_screenshots: true,
+      precheck_include_in_app_purchases: false,
+      force: true
+    )
+  end
+
+  desc "Create app on App Store Connect"
+  lane :create_app do
+    api_key = app_store_connect_api_key(
+      key_id: "5H383G83CF",
+      issuer_id: "d561a068-9c42-4a88-92df-b61c9cc541a7",
+      key_filepath: File.expand_path("~/private_keys/api_key.p8"),
+      in_house: false
+    )
+
+    produce(
+      api_key: api_key,
+      app_identifier: "com.nilehanov.brief",
+      app_name: "Brief: Meeting AI",
+      language: "en-US",
+      app_version: "1.0.0",
+      sku: "com.nilehanov.brief",
+      team_id: "KWQTH8W4TL",
+      platform: "ios"
+    )
+  end
+
+  desc "Upload metadata"
+  lane :metadata do
+    api_key = app_store_connect_api_key(
+      key_id: "5H383G83CF",
+      issuer_id: "d561a068-9c42-4a88-92df-b61c9cc541a7",
+      key_filepath: File.expand_path("~/private_keys/api_key.p8"),
+      in_house: false
+    )
+
+    deliver(
+      api_key: api_key,
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      force: true,
+      precheck_include_in_app_purchases: false,
+      submission_information: {
+        add_id_info_uses_idfa: false
+      }
+    )
+  end
+end
